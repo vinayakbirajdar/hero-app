@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Hero }  from '../hero';
+import { HEROES } from '../mockheroes';
 
 
 @Component({
@@ -9,19 +10,32 @@ import { Hero }  from '../hero';
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css'],
-  imports:[CommonModule, FormsModule],
+  imports:[CommonModule , FormsModule],
 })
 export class HeroesComponent implements OnInit {
-  hero: Hero = {
-    id : 1,
-    name : 'vinay'
-  }
+  // hero: Hero = {
+  //   id : 1,
+  //   name : 'vinayak'
+  // }
+  heroes = HEROES;
+  selectedHero?:Hero;
+  // @Input() hero! : Hero;
+
+  // ! means i will confrim the variable will apper while complilation
+  // ? means i will confrim the variable will apper while complilation
+
 
 
 
   constructor() { }
 
-  ngOnInit() {
+  // getEven() {
+  //   return this.hero.id % 2 != 0 ;
+
+  // }
+  onselect(hero: Hero) {
+    this.selectedHero=hero;
   }
+  ngOnInit() {}
 
 }
