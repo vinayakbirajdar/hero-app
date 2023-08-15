@@ -10,6 +10,12 @@
 </div> -->
 
   <ul class="heroes">
+    <div class="main">
+      <p>
+        herodetails works!
+      </p>
+    </div>
+
     <li *ngFor="let hero of heroes">
       <button [class.selected]="hero === selectedHero"
       type="button" (click) = "onselect(hero)">
@@ -18,6 +24,9 @@
       </button>
     </li >
   </ul>
+
+
+  <app-herodetails></app-herodetails>
 
   
 
@@ -31,3 +40,4 @@
       <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
     </div>
   </div>
+

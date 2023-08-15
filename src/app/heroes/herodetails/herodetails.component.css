@@ -1,0 +1,13 @@
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  text-align: right;
+  /* height:; */
+  width:50%;
+  border: 2px solid red;
+  margin-left:20%;
+  text-align:right;
+
+}
